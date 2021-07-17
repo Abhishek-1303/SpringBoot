@@ -1,0 +1,81 @@
+Enable SSl for springboot app
+
+Steps
+
+1.Certificate
+	Self Signed or Buy 
+
+2.MOdify app.propeties
+
+3.Add @Bean for ServletWebServerFactory
+		our http trafic is handled by WebServer.
+		
+		because we are using embedded tomcat container we need to tell we want to use https and
+		redirect all http traffic to our https port.
+		
+		
+
+!--------------------Step 1-----------------------!
+
+Generate Certificate
+		navigate to jdk bin directory in cmd
+		
+		run this => .\keytools -genkey - alias bootsecurity -storetype PKCS12 -keylag RSA -keysize 2048 -keystore bootsecurity.p12 -validity 3650
+		
+		our security will be named bootsecurity.p12
+		
+		we need to run this command as administator
+		
+Intellije
+			Resources folder paste the certificate
+		
+!--------------------Step 2-------------------------!
+
+now we need to modify application.propeties file
+
+-> server.port=443 //SSL port  we can also give 8443
+-> server.ssl.enabled=true
+-> server.ssl.key-store: src/main/resoures/bootsecurity.p12   //location of the certficate. we copied to resources folder
+-> server.ssl.key-store-password: //type the password given during generation of certificate
+-> server.ssl.keyStoreType: PKCS12
+-> server.ssl.keyAlias: bootsecurity 
+
+We want to tell the embedded servlet container that we want to use SSL and we also want to configure redirection http->https
+
+!---------------------Step 3-----------------------------------!
+
+In entry class of Springboot applicartion
+
+@Bean
+public ServletWebServerFactory servletContainer(){
+	//Enable SSL Traffic
+	TomcatServletWebServerFactory tomcat=new TomcatServletWebServerFactory(){
+		@Override
+		protected void postProcessContext(Context context){
+			SecurityConstraint securityConstraint=new SecurityConstraint();
+			securityConstraint.setUserConstraint("CONFIDENTIAL");
+			SecurityCollection collection=new SecurityCollection();
+			collection.addPattern("/*");
+			securityConstraint.addCollection(collection);
+			context.addConstraint(securityConstraint);
+		}
+	};
+		
+	tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnector());
+
+	return tomcat;
+}
+
+/* we need to redirect from http to https.withouth ssl,this application used port 8080. with ssl it will use port 8443.So any request for port 8080 needs to be redirected to HTTPS on 8443. */
+
+private Connector httpToHttpsRedirectConnector(){
+	Connector connector=new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
+	connector.setScheme("http");
+	conncetor.setPort(8080);
+	connector.setSecure(false);
+	connector.setRedirectPort(8443);
+	return connector;
+}
+	
+
+	
