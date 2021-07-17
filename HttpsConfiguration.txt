@@ -20,7 +20,7 @@ Steps
 Generate Certificate
 		navigate to jdk bin directory in cmd
 		
-		run this => .\keytools -genkey - alias bootsecurity -storetype PKCS12 -keylag RSA -keysize 2048 -keystore bootsecurity.p12 -validity 3650
+		run this => .\keytool -genkey -alias tomcat -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
 		
 		our security will be named bootsecurity.p12
 		
