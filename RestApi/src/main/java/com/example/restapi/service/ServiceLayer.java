@@ -113,7 +113,7 @@ public class ServiceLayer {
         System.out.println(hotelBody);
 
         List<Results> searchResults=hotelBody.getData().getBody().getSearchResults().getResults();
-        searchResults.stream().forEach(e->System.out.println(e.getName()+":"+e.getStarRating()+":"+e.getAddress()));
+        searchResults.stream().forEach(e->System.out.println("Hotel Name : "+e.getName()+" Star Rating : "+e.getStarRating()+" "+e.getAddress()));
 
        return location;
     }
