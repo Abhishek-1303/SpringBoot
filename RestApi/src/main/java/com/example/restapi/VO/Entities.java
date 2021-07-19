@@ -2,30 +2,20 @@ package com.example.restapi.VO;
 
 public class Entities {
 
-    private String type;
-    private String name;
+    private long destinationId;
 
-    public String getType() {
-        return type;
+    public long getDestinationId() {
+        return destinationId;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setDestinationId(long destinationId) {
+        this.destinationId = destinationId;
     }
 
     @Override
     public String toString() {
         return "Entities{" +
-                "type='" + type + '\'' +
-                ", name='" + name + '\'' +
+                "destinationId=" + destinationId +
                 '}';
     }
 }

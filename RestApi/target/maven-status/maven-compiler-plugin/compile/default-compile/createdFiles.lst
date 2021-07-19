@@ -3,6 +3,11 @@ com\example\restapi\VO\User.class
 com\example\restapi\VO\Hotel.class
 com\example\restapi\VO\Suggestion.class
 com\example\restapi\service\ServiceLayer.class
-com\example\restapi\VO\Entities.class
 com\example\restapi\controller\MainController.class
+com\example\restapi\VO\Body.class
+com\example\restapi\VO\Results.class
+com\example\restapi\VO\Entities.class
 com\example\restapi\configuration\Appconfig.class
+com\example\restapi\VO\Location.class
+com\example\restapi\VO\Data.class
+com\example\restapi\VO\SearchResult.class
