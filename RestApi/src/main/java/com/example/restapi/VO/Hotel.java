@@ -2,32 +2,24 @@ package com.example.restapi.VO;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Hotel {
-    private String name;
-    private String caption;
+    private List<Suggestion> suggestions;
 
-    public String getName() {
-        return name;
+    public List<Suggestion> getSuggestions() {
+        return suggestions;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCaption() {
-        return caption;
-    }
-
-    public void setCaption(String caption) {
-        this.caption = caption;
+    public void setSuggestions(List<Suggestion> suggestions) {
+        this.suggestions = suggestions;
     }
 
     @Override
     public String toString() {
         return "Hotel{" +
-                "name='" + name + '\'' +
-                ", caption='" + caption + '\'' +
+                ", suggestions=" + suggestions +
                 '}';
     }
 }

@@ -1,19 +1,21 @@
 package com.example.restapi.service;
 
+import com.example.restapi.VO.Entities;
+import com.example.restapi.VO.Hotel;
+import com.example.restapi.VO.Suggestion;
 import com.example.restapi.VO.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import netscape.javascript.JSObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -44,7 +46,7 @@ public class ServiceLayer {
 //        return new ArrayList<>(users);
 //    }
 
-    public Object ConsumeHotelAPI(String country) throws JsonProcessingException {
+    public Hotel ConsumeHotelAPI(String country) throws JsonProcessingException {
 
         //setting Headers
         HttpHeaders header=new HttpHeaders();
@@ -55,32 +57,66 @@ public class ServiceLayer {
         HttpEntity<String> entity=new HttpEntity<String>(header);
 
         //getting reponse
-        ResponseEntity<String> response=restTemplate.exchange(
+        ResponseEntity<JsonNode> response=restTemplate.exchange(
                 "https://hotels4.p.rapidapi.com/locations/search?query={country}",
                 HttpMethod.GET,
                 entity,
-                String.class,
+                JsonNode.class,
                 country
         );
 
-        String responseString=response.getBody();
-        ObjectMapper mapper=new ObjectMapper();
-        Map<String, Object> map = mapper.readValue(responseString,new TypeReference<Map<String,Object>>(){});
+            JsonNode json=response.getBody();
+            //System.out.println(json);
 
-        System.out.println(map.entrySet());
-        System.out.println(map.get("suggestions"));
+        ResponseEntity<Hotel> hotelResponse=restTemplate.exchange(
+                "https://hotels4.p.rapidapi.com/locations/search?query={country}",
+                HttpMethod.GET,
+                entity,
+                Hotel.class,
+                country
+        );
 
-        Object list=map.get("suggestions");
-        System.out.println("Object : "+list);
+        //System.out.println(hotelResponse);
+        Hotel hotel=hotelResponse.getBody();
+        System.out.println(hotel);
+        List<Suggestion> hotelList=hotel.getSuggestions();
 
-        String suggestionList=list.toString();
-        System.out.println("suggestion list : "+suggestionList);
-        //System.out.println(map.get("suggestions").getClass().getSimpleName());
-        String newString=suggestionList.substring(19);
-        System.out.println(newString);
+//        List<List<Entities>> entities=hotelList
+//                .stream()
+//                .map(suggestion -> suggestion.getEntities()).collect(Collectors.toList());
+//
+//        List<Entities> entitiesList=entities.stream()
+//                .flatMap(Collection::stream)
+//                .collect(Collectors.toList());
+
+                List<Entities> entities=hotelList
+                .stream()
+                .map(suggestion -> suggestion.getEntities())
+                        .flatMap(Collection::stream)
+                        .collect(Collectors.toList());
+
+
+        entities.stream().forEach(e->System.out.println(e.getName()+":"+e.getType()));
 
 
 
-        return map.get("suggestions");
+//        ObjectMapper mapper=new ObjectMapper();
+//        Map<String, Object> map = mapper.readValue(responseString,new TypeReference<Map<String,Object>>(){});
+//
+//        System.out.println(map.entrySet());
+//        System.out.println(map.get("suggestions"));
+//
+//        Object list=map.get("suggestions");
+//        System.out.println("Object : "+list);
+//
+//        String suggestionList=list.toString();
+//        System.out.println("suggestion list : "+suggestionList);
+//        //System.out.println(map.get("suggestions").getClass().getSimpleName());
+//        String newString=suggestionList.substring(19);
+//        System.out.println(newString);
+//
+
+
+       return hotel;
     }
 }
