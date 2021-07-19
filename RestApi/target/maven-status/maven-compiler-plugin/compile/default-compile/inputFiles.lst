@@ -1,8 +1,14 @@
-D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\RestApiApplication.java
 D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\User.java
 D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\Entities.java
+D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\SearchResult.java
 D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\Location.java
 D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\Suggestion.java
+D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\Body.java
+D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\Data.java
+D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\Results.java
+D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\RestApiApplication.java
+D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\Hotel.java
 D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\service\ServiceLayer.java
+D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\VO\Address.java
 D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\controller\MainController.java
 D:\GithubLitmus\SpringBoot\SpringBoot\RestApi\src\main\java\com\example\restapi\configuration\Appconfig.java

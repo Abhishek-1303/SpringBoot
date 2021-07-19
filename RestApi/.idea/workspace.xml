@@ -5,32 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f8e37f3-60cd-4a7b-aa92-5e5faf8b5eb8" name="Default Changelist" comment="modified">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Body.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Results.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestApi.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Entities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Suggestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Suggestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/VO/Results.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restapi/service/ServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restapi/service/ServiceLayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/RestApi-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/RestApi-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/RestApi-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/RestApi-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restapi/RestApiApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/restapi/RestApiApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restapi/VO/Entities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/restapi/VO/Entities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restapi/VO/Hotel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/restapi/VO/Hotel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restapi/VO/Suggestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/restapi/VO/Suggestion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restapi/VO/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/restapi/VO/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restapi/configuration/Appconfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/restapi/configuration/Appconfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/restapi/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/restapi/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/restapi/service/ServiceLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/restapi/service/ServiceLayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.restapi.RestApiApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.restapi.RestApiApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.restapi.RestApiApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.restapi.RestApiApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/restapi/RestApiApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/restapi/RestApiApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

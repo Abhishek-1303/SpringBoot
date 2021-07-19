@@ -3,6 +3,7 @@ package com.example.restapi.VO;
 public class Results {
     private String name;
     private Double starRating;
+    private Address address;
 
     public String getName() {
         return name;
@@ -20,11 +21,20 @@ public class Results {
         this.starRating = starRating;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Results{" +
                 "name='" + name + '\'' +
                 ", starRating=" + starRating +
+                ", address=" + address +
                 '}';
     }
 }

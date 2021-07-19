@@ -4,6 +4,7 @@ com\example\restapi\VO\Hotel.class
 com\example\restapi\VO\Suggestion.class
 com\example\restapi\service\ServiceLayer.class
 com\example\restapi\controller\MainController.class
+com\example\restapi\VO\Address.class
 com\example\restapi\VO\Body.class
 com\example\restapi\VO\Results.class
 com\example\restapi\VO\Entities.class
